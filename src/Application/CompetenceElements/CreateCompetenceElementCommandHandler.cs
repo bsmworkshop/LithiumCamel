@@ -3,10 +3,10 @@ using LithiumCamel.Shared;
 
 namespace LithiumCamel.Application.CompetenceElements
 {
-    public class CreateCompetenceElementCommandHandler(IRepositoryBase<CompetenceElement> repository)
+    public class CreateCompetenceElementCommandHandler(IRepository<CompetenceElement> repository)
         : ICommandHandler<CreateCompetenceElementCommand, int>
     {
-        private IRepositoryBase<CompetenceElement> _repository = repository;
+        private IRepository<CompetenceElement> _repository = repository;
 
         public async Task<int> Handle(CreateCompetenceElementCommand request, CancellationToken cancellationToken)
         {

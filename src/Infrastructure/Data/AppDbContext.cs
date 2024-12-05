@@ -28,7 +28,7 @@ namespace LithiumCamel.Infrastructure.Data
                 .Where(e => e.DomainEvents.Any())
                 .ToArray();
 
-            await _dispatcher.DispatchAndClearEventsAsync(entitiesWithEvents);
+            await _dispatcher.DispatchAndClearEvents(entitiesWithEvents);
 
             return result;
         }

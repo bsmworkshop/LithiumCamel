@@ -1,6 +1,8 @@
-﻿namespace LithiumCamel.Domain.Entities
+﻿using LithiumCamel.Shared;
+
+namespace LithiumCamel.Domain.Entities
 {
-    public class CompetenceElement
+    public class CompetenceElement : EntityWithAuditingBase
     {
         private CompetenceElement(
             int id,
@@ -22,7 +24,6 @@
             CanNeverExpire = canNeverExpire;
         }
 
-        public int Id { get; private set; }
         public string Label { get; private set; }
         public short? DefaultExpiryDays { get; private set; }
         public short? DefaultExpiryMonths { get; private set; }

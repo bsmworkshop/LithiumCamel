@@ -1,6 +1,6 @@
 ﻿namespace LithiumCamel.Shared
 {
-    public interface IRepositoryBase<T> : IReadRepositoryBase<T>
+    public interface IRepository<T> : IReadRepository<T>
         where T : class
     {
         Task<T> AddAsync(T entity, CancellationToken cancellationToken = default);

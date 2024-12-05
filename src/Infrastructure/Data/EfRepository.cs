@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 namespace LithiumCamel.Infrastructure.Data
 {
     public class EfRepository<T>(AppDbContext context)
-        : IReadRepositoryBase<T>, IRepositoryBase<T>
+        : IReadRepository<T>, IRepository<T>
         where T : class
     {
         private readonly AppDbContext _context = context;
