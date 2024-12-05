@@ -1,4 +1,6 @@
-﻿namespace LithiumCamel.Application.CompetenceElements
+﻿using LithiumCamel.Shared;
+
+namespace LithiumCamel.Application.CompetenceElements
 {
     public record CreateCompetenceElementCommand(
         string Label,
@@ -7,5 +9,5 @@
         short? DefaultExpiryYears,
         bool CanShortenDefaultExpiry,
         bool CanLengthenDefaultExpiry,
-        bool CanNeverExpire);
+        bool CanNeverExpire) : ICommand<int>;
 }
